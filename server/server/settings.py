@@ -25,7 +25,7 @@ SECRET_KEY = '4e0!oxm9h_s=-c58ypaj(e^l8tp+a7oh2_y)x3p-1)#odlf&lq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["cloudcb.herokuapp.com", "localhost", "127.0.0.1", "::1"]
+ALLOWED_HOSTS = ["data-dive.com", "localhost", "127.0.0.1", "::1"]
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     'rest_framework',
     'clipboard.apps.ClipboardConfig',
 ]
