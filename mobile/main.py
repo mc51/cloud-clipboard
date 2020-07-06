@@ -42,7 +42,7 @@ class LoginScreen(Screen):
         store = JsonStore('data.json')
         store.put('creds', token=token)
         show_cloudcb(self.manager, token)
-    
+
     def login(self, button):
         token = "%s:%s" % (self.username_w.text, self.password_w.text)
         token = base64.b64encode(token.encode('utf-8')).decode('utf-8')
@@ -67,7 +67,7 @@ class CloudCBScreen(Screen):
         self.url = SERVER_URI + 'copy-paste/'
         self.old_text = Clipboard.paste()
         self.cloud_clip = TextInput(text="Fetching...")
-        
+
         layout = BoxLayout(orientation='vertical')
         layout.add_widget(Label(text='Cloud Clipboard'))
         layout.add_widget(Label(text='Current text on clipboard:'))
@@ -87,15 +87,15 @@ class CloudCBScreen(Screen):
             on_success = self.paste,
             on_error = utils.show_error,
             on_failure = self.show_failure
-        )        
-        
+        )
+
     def paste(self, req='', res=''):
         Clipboard.copy(res['text'])
         self.update_cloud_clip()
-        
+
     def upload(self, *args):
-        # payload = urllib.parse.urlencode({'text': self.old_text})  # python3
-        payload = urllib.urlencode({'text': self.old_text})  # python2
+        payload = urllib.parse.urlencode({'text': self.old_text})  # python3
+        # payload = urllib.urlencode({'text': self.old_text})  # python2
         self.header['Content-type'] = 'application/x-www-form-urlencoded'
         copy_res = UrlRequest(
             self.url,
@@ -116,8 +116,8 @@ class CloudCBScreen(Screen):
         if req.resp_status / 100 == 4:
             show_login(self.manager)
 
-        
-        
+
+
 class MyApp(App):
 
     def get_data(self, key):
@@ -144,6 +144,6 @@ def show_login(sm):
 def show_cloudcb(sm, auth_token):
     s = CloudCBScreen(auth_token, name='CloudCB')
     sm.switch_to(s)
-     
+
 if __name__ == '__main__':
     MyApp().run()

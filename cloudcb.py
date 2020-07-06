@@ -9,8 +9,8 @@ import subprocess
 import requests
 import pyperclip
 
-server_url = "https://cloudcb.herokuapp.com/"
-#server_url =  "http://localhost:8000/"
+#server_url = "https://cloudcb.herokuapp.com/"
+server_url =  "http://localhost:8000/"
 
 def copy():
     """
@@ -78,7 +78,7 @@ def register(username, password):
 def usage():
     print("Error: Unknown argument")
     print("Usage: cloudcb.py copy|paste|register <email> <password>")
-    
+
 
 if __name__ == "__main__":
     #print("Cloud Clipboard -- Share you clipboard accross the devices.")

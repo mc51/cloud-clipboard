@@ -1,5 +1,5 @@
-#SERVER_URI = 'http://localhost:8000/'
-SERVER_URI = 'http://cloudcb.herokuapp.com/'
+SERVER_URI = 'http://localhost:8000/'
+#SERVER_URI = 'http://cloudcb.herokuapp.com/'
 
 def show_error(req, error):
     print(
@@ -8,4 +8,3 @@ def show_error(req, error):
         "This seems unusual. Please file a bug report with above details",
         "at https://github.com/krsoninikhil/cloud-clipboard/issues"
     )
-

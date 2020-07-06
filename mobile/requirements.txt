@@ -4,7 +4,7 @@
 # mobile/.buildozer/android/platform/build/build/other_builds/kivy-python2-sdl2/armeabi-v7a/kivy/setup.py: 219,221
 # mobile/.buildozer/android/platform/build/build/other_builds/pyjnius-python2-sdl2/armeabi-v7a/pyjnius/setup.py: 53
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/setuptools/command/build_ext.py: 17
-Cython == 0.25.2
+Cython
 
 # mobile/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/build.py: 18
 # mobile/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/build/build.py: 18
@@ -33,7 +33,7 @@ Cython == 0.25.2
 # mobile/.buildozer/android/platform/python-for-android-master/pythonforandroid/bootstraps/sdl2/build/build.py: 18
 # mobile/.buildozer/android/platform/python-for-android-master/pythonforandroid/bootstraps/service_only/build/build.py: 19
 # mobile/.buildozer/android/platform/python-for-android-master/pythonforandroid/bootstraps/webview/build/build.py: 18
-Jinja2 == 2.9.6
+Jinja2
 
 # mobile/.buildozer/android/app/main.py: 9,10,11,12
 # mobile/.buildozer/android/platform/build/build/other_builds/kivy-python2-sdl2/armeabi-v7a/kivy/build/lib.linux-x86_64-2.7/kivy/__init__.py: 52,327,414,442,447
@@ -1686,21 +1686,20 @@ Kivy == 1.9.1
 # mobile/.buildozer/android/platform/build/dists/cloudcb/python-install/lib/python2.7/site-packages/kivy/tools/generate-icons.py: 10
 # mobile/.buildozer/android/platform/build/dists/cloudcb/python-install/lib/python2.7/site-packages/kivy/tools/texturecompress.py: 33
 # mobile/.buildozer/android/platform/build/dists/cloudcb/python-install/share/kivy-examples/android/takepicture/main.py: 32
-Pillow == 4.1.0
+Pillow
 
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/pkg_resources/__init__.py: 74
 # mobile/.buildozer/android/platform/python-for-android-master/pythonforandroid/toolchain.py: 79
-appdirs == 1.4.3
+appdirs
 
 # mobile/.buildozer/android/platform/python-for-android-master/pythonforandroid/logger.py: 9
 # mobile/.buildozer/android/platform/python-for-android-master/pythonforandroid/recipes/vlc/__init__.py: 6
-colorama == 0.3.7
-
+colorama
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/pkg_resources/__init__.py: 70,71,72,73
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/setuptools/command/egg_info.py: 33
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/setuptools/dist.py: 17,18
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/setuptools/msvc.py: 25
-packaging == 16.8
+packaging
 
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/pip/__init__.py: 254
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/pip/__main__.py: 16
@@ -1773,7 +1772,6 @@ packaging == 16.8
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/pip/vcs/mercurial.py: 8,9,10
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/pip/vcs/subversion.py: 12,166
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/pip/wheel.py: 33,36,37,38,39,40,41,42,552
-pip == 9.0.1
 
 # mobile/.buildozer/android/platform/build/build/other_builds/kivy-python2-sdl2/armeabi-v7a/kivy/build/lib.linux-x86_64-2.7/kivy/app.py: 1031
 # mobile/.buildozer/android/platform/build/build/other_builds/kivy-python2-sdl2/armeabi-v7a/kivy/build/lib.linux-x86_64-2.7/kivy/core/audio/audio_pygame.py: 20
@@ -1820,11 +1818,11 @@ pip == 9.0.1
 # mobile/.buildozer/android/platform/build/dists/cloudcb/python-install/lib/python2.7/site-packages/kivy/input/providers/androidjoystick.py: 28
 # mobile/.buildozer/android/platform/build/dists/cloudcb/python-install/lib/python2.7/site-packages/kivy/support.py: 79
 # mobile/.buildozer/android/platform/build/dists/cloudcb/python-install/lib/python2.7/site-packages/kivy/tests/common.py: 148
-pygame == 1.9.3
+pygame
 
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/packaging/markers.py: 12,13
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/packaging/requirements.py: 10,11
-pyparsing == 2.2.0
+pyparsing
 
 # mobile/.buildozer/android/platform/build/build/other_builds/kivy-python2-sdl2/armeabi-v7a/kivy/build/lib.linux-x86_64-2.7/kivy/tools/benchmark.py: 266
 # mobile/.buildozer/android/platform/build/build/other_builds/kivy-python2-sdl2/armeabi-v7a/kivy/build/lib.linux-x86_64-2.7/kivy/tools/report.py: 46
@@ -1840,7 +1838,7 @@ pyparsing == 2.2.0
 # mobile/.buildozer/android/platform/build/dists/cloudcb/private/lib/python2.7/site-packages/kivy/tools/report.py: 46
 # mobile/.buildozer/android/platform/build/dists/cloudcb/python-install/lib/python2.7/site-packages/kivy/tools/benchmark.py: 266
 # mobile/.buildozer/android/platform/build/dists/cloudcb/python-install/lib/python2.7/site-packages/kivy/tools/report.py: 46
-requests == 2.13.0
+requests
 
 # mobile/.buildozer/android/platform/build/build/other_builds/kivy-python2-sdl2/armeabi-v7a/kivy/setup.py: 25
 # mobile/.buildozer/android/platform/build/build/other_builds/pyjnius-python2-sdl2/armeabi-v7a/pyjnius/setup.py: 57
@@ -1897,7 +1895,7 @@ requests == 2.13.0
 # mobile/.buildozer/android/platform/python-for-android-master/testapps/setup_vispy.py: 3
 # mobile/.buildozer/android/platform/python-for-android-master/testapps/testlauncher_setup/pygame.py: 2
 # mobile/.buildozer/android/platform/python-for-android-master/testapps/testlauncher_setup/sdl2.py: 2
-setuptools == 34.4.1
+setuptools 
 
 # mobile/.buildozer/android/platform/python-for-android-master/pythonforandroid/bootstrap.py: 3
 # mobile/.buildozer/android/platform/python-for-android-master/pythonforandroid/bootstraps/empty/__init__.py: 5
@@ -1959,7 +1957,7 @@ setuptools == 34.4.1
 # mobile/.buildozer/android/platform/python-for-android-master/pythonforandroid/recipes/zope/__init__.py: 4
 # mobile/.buildozer/android/platform/python-for-android-master/pythonforandroid/recipes/zope_interface/__init__.py: 2
 # mobile/.buildozer/android/platform/python-for-android-master/pythonforandroid/toolchain.py: 77
-sh == 1.12.13
+sh 
 
 # mobile/.buildozer/android/platform/build/build/other_builds/pyjnius-python2-sdl2/armeabi-v7a/pyjnius/build/lib.linux-x86_64-2.7/jnius/reflect.py: 6
 # mobile/.buildozer/android/platform/build/build/other_builds/pyjnius-python2-sdl2/armeabi-v7a/pyjnius/jnius/reflect.py: 6
@@ -2004,7 +2002,7 @@ sh == 1.12.13
 # mobile/.buildozer/android/platform/python-for-android-master/pythonforandroid/logger.py: 10
 # mobile/.buildozer/android/platform/python-for-android-master/pythonforandroid/recipe.py: 6
 # mobile/.buildozer/android/platform/python-for-android-master/testapps/testapp_nogui/main.py: 14,21
-six == 1.10.0
+six 
 
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/pip/commands/install.py: 10
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/wheel/__main__.py: 13
@@ -2022,4 +2020,4 @@ six == 1.10.0
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/wheel/test/test_wheelfile.py: 2,3
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/wheel/tool/__init__.py: 9,100
 # mobile/.buildozer/android/platform/build/build/venv/lib/python2.7/site-packages/wheel/wininst2wheel.py: 7,11
-wheel == 0.29.0
+wheel 
