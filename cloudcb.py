@@ -4,28 +4,37 @@
 
 import os
 import sys
+import time
 import json
 import subprocess
 import requests
 import pyperclip
 
 #server_url = "https://cloudcb.herokuapp.com/"
-server_url =  "http://localhost:8000/"
+server_url =  "https://data-dive.com:9999/"
+TIMEOUT = 2
+
+def wait_for_copy():
+    """
+    Wait until something is copied, i.e. clipboard content changes
+    """
+    data = copy()
+    print(f"Current clipboard: {data}\n")
+    while True:
+        time.sleep(TIMEOUT)
+        data_new = copy()
+        if data_new != data:
+            # Todo -> RegEx check for only whitespaces, i.e. empty strings
+            print(f"Got new clipboard content: {data_new}\n")
+            break
+        else:
+            print("Waiting for new copy action...", sep="", end="\r")
 
 def copy():
     """
     Returns the current text on clipboard.
     """
     data = pyperclip.paste()
-    ## before using pyperclip
-    # if os.name == "posix":
-    #     p = subprocess.Popen(["xsel", "-bo"], stdout=subprocess.PIPE)
-    #     data = p.communicate()[0].decode("utf-8")
-    # elif os.name == "nt":
-    #     data = None
-    # else:
-    #     print("We don't yet support %s Operating System." % os.name)
-    #     exit()
     return data
 
 def upload(username, password):
@@ -47,11 +56,6 @@ def paste(data):
     """
     Copies 'data' to local clipboard which enables pasting.
     """
-    # p = subprocess.Popen(["xsel", "-bi"], stdout=subprocess.PIPE,
-    #                      stdin=subprocess.PIPE)
-    # p = p.communicate(data.encode("utf-8"))
-    # if p[1] is not None:
-    #     print("Error in accessing local clipboard")
     pyperclip.copy(data)
 
 def download(username, password):
@@ -77,7 +81,7 @@ def register(username, password):
 
 def usage():
     print("Error: Unknown argument")
-    print("Usage: cloudcb.py copy|paste|register <email> <password>")
+    print("Usage: cloudcb.py copy|paste|register|wait <email> <password>")
 
 
 if __name__ == "__main__":
@@ -91,6 +95,8 @@ if __name__ == "__main__":
             download(username, password)
         elif sys.argv[1] == "register":
             register(username, password)
+        elif sys.argv[1] == "wait":
+            wait_for_copy()
         else:
             usage()
     else:

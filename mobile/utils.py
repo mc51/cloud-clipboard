@@ -1,4 +1,4 @@
-SERVER_URI = 'http://localhost:8000/'
+SERVER_URI = 'http://data-dive.com:9999/'
 #SERVER_URI = 'http://cloudcb.herokuapp.com/'
 
 def show_error(req, error):
