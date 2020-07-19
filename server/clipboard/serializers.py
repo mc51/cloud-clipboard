@@ -4,6 +4,7 @@ from clipboard.models import Clip
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+# TODO: Add encryption to Serializer
 
 class ClipSerializer(serializers.ModelSerializer):
     # Using ModelSerializers is just shortcut for Serializers
@@ -25,7 +26,7 @@ class UserSerializer(serializers.ModelSerializer):
         user.set_password(valid_data['password'])
         user.save()
         return user
-    
+
     class Meta:
         model = User
         fields = ('id', 'username', 'password')
@@ -43,4 +44,3 @@ def init_clip(sender, instance, created, **kwargs):
         )
     else:
         pass
-        

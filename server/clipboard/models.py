@@ -1,5 +1,6 @@
 from django.db import models
 
+# TODO: encrypt text field
 
 class Clip(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
@@ -10,4 +11,3 @@ class Clip(models.Model):
 
     class Meta:
         ordering = ('created_at',)
-

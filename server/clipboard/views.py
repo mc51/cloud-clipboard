@@ -5,9 +5,11 @@ from clipboard.serializers import ClipSerializer, UserSerializer
 from clipboard.permissions import IsOwnerOrReadOnly
 from rest_framework import status
 from rest_framework.response import Response
-from rest_framework.views import APIView 
+from rest_framework.views import APIView
 from rest_framework import permissions
 from rest_framework.throttling import AnonRateThrottle
+
+# ToDos: Rate Limits per user and total for login  / register
 
 class ListClip(APIView):
     """
@@ -25,9 +27,9 @@ class ListClip(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly)
+    permission_classes = (permissions.IsAuthenticated, IsOwnerOrReadOnly)
 
-            
+
 class CopyPaste(APIView):
     """
     Update and retrieve the data.
@@ -37,7 +39,7 @@ class CopyPaste(APIView):
             return Clip.objects.get(user=user)
         except Clip.DoesNotExist:
             raise Http404
-    
+
     def post(self, request):
         clip = self.get_clip(request.user)
         serializer = ClipSerializer(clip, data=request.data)
@@ -60,7 +62,7 @@ class UserRegister(APIView):
     """
 
     throttle_classes = (AnonRateThrottle,)
-    
+
     def post(self, request):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
@@ -75,4 +77,3 @@ class UserVerify(APIView):
         return Response(status=status.HTTP_200_OK)
 
     permission_classes = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly)
-    
