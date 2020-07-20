@@ -12,12 +12,12 @@
 # server/manage.py: 14
 # server/server/urls.py: 16,17
 # server/server/wsgi.py: 12
-Django == 1.10.6
+Django 
 
 # server/server/settings.py: 87
-dj_database_url == 0.4.2
+dj_database_url 
 
 # server/clipboard/permissions.py: 1
 # server/clipboard/serializers.py: 2
 # server/clipboard/views.py: 6,7,8,9,10
-djangorestframework == 3.6.2
+djangorestframework 

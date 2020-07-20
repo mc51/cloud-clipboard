@@ -8,6 +8,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import permissions
 from rest_framework.throttling import AnonRateThrottle
+from django.contrib.auth.password_validation import validate_password, ValidationError
 
 # ToDos: Rate Limits per user and total for login  / register
 
@@ -16,9 +17,11 @@ class ListClip(APIView):
     List the most recently copied texts. I am calling them 'clips'.
     """
     def get(self, request):
-        clips = Clip.objects.all()
+        # Only show own clips
+        clips = Clip.objects.filter(user=self.request.user)
         serializer = ClipSerializer(clips, many=True)
         return Response(serializer.data)
+
 
     def post(self, request):
         serializer = ClipSerializer(data=request.data)
@@ -64,11 +67,16 @@ class UserRegister(APIView):
     throttle_classes = (AnonRateThrottle,)
 
     def post(self, request):
-        serializer = UserSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data['username'], status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        try:
+            validate_password(request.data['password'])
+        except ValidationError as e:
+            return Response(e, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            serializer = UserSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data['username'], status=status.HTTP_201_CREATED)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class UserVerify(APIView):

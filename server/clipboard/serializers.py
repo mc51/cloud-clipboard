@@ -4,8 +4,6 @@ from clipboard.models import Clip
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-# TODO: Add encryption to Serializer
-
 class ClipSerializer(serializers.ModelSerializer):
     # Using ModelSerializers is just shortcut for Serializers
     # with default create and update

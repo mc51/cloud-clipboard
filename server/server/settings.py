@@ -136,6 +136,7 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '2/minute',
+        "anon": "10/minute",
+        "user": "30/minute"
     }
 }

@@ -11,7 +11,8 @@ import requests
 import pyperclip
 
 #server_url = "https://cloudcb.herokuapp.com/"
-server_url =  "https://data-dive.com:9999/"
+# server_url =  "https://data-dive.com:9999/"
+server_url = "http://localhost:8000/"
 TIMEOUT = 2
 
 def wait_for_copy():
